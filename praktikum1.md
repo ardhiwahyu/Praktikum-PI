@@ -43,12 +43,12 @@
     Untuk menginstal GUI dari mongoDB, kita bisa menggunakan aplikasi MongoDB Compass. Tahapannya yaitu : <br>
     1. Buka website MongoDB atau bisa melalui link https://www.mongodb.com/try/download/shell <br>
     2. Lalu pilih versi dan platform yang sesuai dengan device kalian.
-    ![Screenshot Mongodb](../Gambar_Praktikum1/5.png)
+    ![Screenshot Mongodb](Gambar_Praktikum1/5.png)
     <br>
     disini saya menggunakan platform MacOS M1 dengan versi 1.10.6 lalu klik *download*
     3. Setelah Download, lalu ekstrak dan jalankan aplikasi MongoDB compass
     4. Lalu Mongodb Compass berhasil dijalankan.
-    ![Screenshot MongoDB Compass](../Gambar_Praktikum1/6.png)
+    ![Screenshot MongoDB Compass](Gambar_Praktikum1/6.png)
 
     * ## Percobaan Instalasi Lumen
     Untuk menginstal lumen, kita dapat menggunakan visual studio code. Untuk cara yaitu : <br>
