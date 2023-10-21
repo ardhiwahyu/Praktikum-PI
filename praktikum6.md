@@ -104,39 +104,13 @@
   Response handler adalah fungsi yang digunakan untuk membentuk output yang diharapkan kepada user dan beberapa properti selain data seperti status code dan header. Berikut adalah langkah-langkah untuk membuat response handler:<br>
   <tb>1. Lakukan import library Response dengan menambahkan baris berikut di bagian atas file ```HomeController.php```<br>
   ```
-    <?php
-      namespace App\Http\Controllers;
-      
-      use Illuminate\Http\Request;
-      use Illuminate\Http\Response; // import library Response
+    // import library Response
+      use Illuminate\Http\Response;
   ```
   ![Screenshot response handler](/Gambar_Praktikum6/9.png) <br>
   
   <tb>2. Buatlah fungsi ```hello()``` yang berisi<br>
   ```
-    <?php
-      namespace App\Http\Controllers;
-      
-      use Illuminate\Http\Request;
-      use Illuminate\Http\Response;
-  
-      class HomeController extends Controller
-      {
-        /**
-        * Create a new controller instance.
-        *
-        * @return void
-        */
-        public function __construct()
-        {
-        //
-        }
-  
-        public function index (Request $request)
-        {
-        return 'Hello, from lumen! We got your request from endpoint: ' . $request->path();
-        }
-        
         // Pembuatan fungsi hello
         public function hello()
         {
@@ -145,14 +119,11 @@
         return (new Response($data, 201))
             ->header('Content-Type', 'application/json');
         }
-      }
   ```
   ![Screenshot response handler](/Gambar_Praktikum6/10.png) <br>
   
   <tb>3. Tambahkan route ```/hello``` pada file ```routes/web.php```<br>
   ```
-    <?php
-      $router->get('/', ['uses' => 'HomeController@index']);
       $router->get('/hello', ['uses' => 'HomeController@hello']); // route hello
   ```
   ![Screenshot response handler](/Gambar_Praktikum6/11.png) <br>
@@ -163,27 +134,13 @@
 * ## Penerapan
   <tb>1. JLakukan import model User dengan menambahkan baris berikut di bagian atas file ```HomeController.php```<br>
   ```
-    <?php
-      namespace App\Http\Controllers;
-      
-      use App\Models\User; // import model User
-      use Illuminate\Http\Request;
-      use Illuminate\Http\Response;
+    // import model User
+      use App\Models\User; 
   ```
   ![Screenshot penerapan](/Gambar_Praktikum6/13.png) <br>
   
   <tb>2. Tambahkan ketiga fungsi berikut di ```HomeController.php```<br>
   ```
-    <?php
-      namespace App\Http\Controllers;
-      
-      use App\Models\User; // import model User
-      use Illuminate\Http\Request;
-      use Illuminate\Http\Response;
-      
-      class HomeController extends Controller
-      {
-        ...
         // Tiga Fungsi
         public function defaultUser()
         {
@@ -235,16 +192,12 @@
           ],200);
         }
       // Tiga Fungsi
-      }
   ```
   ![Screenshot penerapan](/Gambar_Praktikum6/14.png) <br>
   ![Screenshot penerapan](/Gambar_Praktikum6/15.png) <br>
   
   <tb>3. Tambahkan ketiga route pada file ```routes/web.php``` menggunakan group route<br>
-  ```
-    $router->get('/', ['uses' => 'HomeController@index']);
-    $router->get('/hello', ['uses' => 'HomeController@hello']);
-  
+  ```  
     // Tiga Route
     $router->group(['prefix' => 'users'], function () use ($router) {
         $router->post('/default', ['uses' => 'HomeController@defaultUser']);
@@ -258,12 +211,16 @@
   ![Screenshot penerapan](/Gambar_Praktikum6/17.png) <br>
   
   ***Hasil eksekusi pada phpmyadmin***<br>
+
+
   ![Screenshot penerapan](/Gambar_Praktikum6/18.png) <br>
   
   <tb>5. Jalankan aplikasi pada route ```/users/new``` dengan mengisi body sebagai berikut<br>
   ![Screenshot penerapan](/Gambar_Praktikum6/19.png) <br>
   
   ***Hasil eksekusi pada phpmyadmin***<br>
+
+  
   ![Screenshot penerapan](/Gambar_Praktikum6/20.png) <br>
   
   <tb>6. Jalankan aplikasi pada route ```/users/all```<br>
