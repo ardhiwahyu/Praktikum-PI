@@ -10,7 +10,8 @@
   email |
   password |
 
-![Screenshot register](/Gambar_Praktikum8/1.PNG) <br>
+![Screenshot register](/Gambar_Praktikum8/1.png) <br>
+
   <tb>2. Pastikan terdapat model ```User.php``` yang digunakan pada bab 5 ___Model, Controller, dan Request-Response Handler___. Berikut baris kode yang harus ada <br>
   ```
     <?php
