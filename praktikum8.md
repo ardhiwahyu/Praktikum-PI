@@ -41,7 +41,7 @@
     }
   ```
 
-  ![Screenshot register](/Gambar_Praktikum8/2.PNG) <br>
+  ![Screenshot register](/Gambar_Praktikum8/2.png) <br>
 
   
   <tb>3. Buatlah file ```AuthController.php``` dan isilah dengan baris kode berikut <br>
@@ -89,7 +89,7 @@
       }
   ```
 
-  ![Screenshot register](/Gambar_Praktikum8/3.PNG) <br>
+  ![Screenshot register](/Gambar_Praktikum8/3.png) <br>
 
   <tb>4. Tambahkan baris berikut pada ```routes/web.php``` <br>
   ```
@@ -99,7 +99,7 @@
       $router->post('/register', ['uses'=> 'AuthController@register']);
     });
   ```
-  ![Screenshot register](/Gambar_Praktikum8/4.PNG) <br>
+  ![Screenshot register](/Gambar_Praktikum8/4.png) <br>
   <tb>5. Jalankan aplikasi pada endpoint ```/auth/register``` dengan body berikut <br>
   ```
     {
@@ -109,11 +109,11 @@
     }
   ```
 
-  ![Screenshot register](/Gambar_Praktikum8/5.PNG) <br>
+  ![Screenshot register](/Gambar_Praktikum8/5.png) <br>
 
   **Hasil pada PHPMyAdmin**<br>
   
-  ![Screenshot register](/Gambar_Praktikum8/6.PNG) <br>
+  ![Screenshot register](/Gambar_Praktikum8/6.png) <br>
   
 * ## Authentication
   <tb>1. Buatlah fungsi ```login(Request $request)``` pada file ```AuthController.php``` <br>
@@ -160,7 +160,7 @@
     }
   ```
 
-  ![Screenshot authentication](/Gambar_Praktikum8/7.PNG) <br>
+  ![Screenshot authentication](/Gambar_Praktikum8/7.png) <br>
 
   
   <tb>2. Tambahkan baris berikut pada ```routes/web.php``` <br>
@@ -173,7 +173,7 @@
     });
   ```
 
-  ![Screenshot authentication](/Gambar_Praktikum8/8.PNG) <br>
+  ![Screenshot authentication](/Gambar_Praktikum8/8.png) <br>
 
   
   <tb>3. Jalankan aplikasi pada endpoint ```/auth/login``` dengan body berikut <br>
@@ -184,7 +184,7 @@
     }
   ```
 
-  ![Screenshot authentication](/Gambar_Praktikum8/9.PNG) <br>
+  ![Screenshot authentication](/Gambar_Praktikum8/9.png) <br>
 
   
   > [!NOTE]
@@ -192,11 +192,11 @@
 
   **Hasil ketika password salah**<br>
 
-  ![Screenshot authentication](/Gambar_Praktikum8/10.PNG) <br>
+  ![Screenshot authentication](/Gambar_Praktikum8/10.png) <br>
 
   **Hasil ketika email salah**<br>
 
-  ![Screenshot authentication](/Gambar_Praktikum8/11.PNG) <br>
+  ![Screenshot authentication](/Gambar_Praktikum8/11.png) <br>
 
   
 * ## Token
@@ -205,7 +205,7 @@
     php artisan make:migration add_column_token_to_users
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/12.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/12.png) <br>
 
   
   <tb>2. Tambahkan baris berikut pada migration yang baru terbuat <br>
@@ -245,7 +245,7 @@
 
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/13.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/13.png) <br>
 
   
   <tb>3. Tambahkan atribut token di ```$fillable``` pada ```User.php``` <br>
@@ -278,7 +278,7 @@
     }
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/14.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/14.png) <br>
 
   
   <tb>4. Tambahkan baris berikut pada file ```AuthController.php``` <br>
@@ -359,7 +359,7 @@
     }
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/15.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/15.png) <br>
 
   
   <tb>5. Jalankan perintah di bawah untuk menjalankan migrasi terbaru <br>
@@ -367,7 +367,7 @@
     php artisan migrate
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/16.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/16.png) <br>
 
   
   <tb>6. Jalankan aplikasi pada endpoint ```/auth/login``` dengan body berikut. Salinlah token yang didapat ke notepad<br>
@@ -378,7 +378,7 @@
     }
   ```
 
-  ![Screenshot token](/Gambar_Praktikum8/17.PNG) <br>
+  ![Screenshot token](/Gambar_Praktikum8/17.png) <br>
 
   
 * ## Authorization
@@ -423,7 +423,7 @@
       }
   ```
 
-  ![Screenshot authorization](/Gambar_Praktikum8/18.PNG) <br>
+  ![Screenshot authorization](/Gambar_Praktikum8/18.png) <br>
 
   
   <tb>2. Tambahkan middleware yang baru dibuat pada ```bootstrap/app.php```.<br>
@@ -448,7 +448,7 @@
     ]);
   ```
 
-  ![Screenshot authorization](/Gambar_Praktikum8/19.PNG) <br>
+  ![Screenshot authorization](/Gambar_Praktikum8/19.png) <br>
 
   
   <tb>3. Buatlah fungsi ```home()``` pada ```HomeController.php```<br>
@@ -475,7 +475,7 @@
     }
   ```
 
-  ![Screenshot authorization](/Gambar_Praktikum8/20.PNG) <br>
+  ![Screenshot authorization](/Gambar_Praktikum8/20.png) <br>
 
   
   <tb>4. Tambahkan baris berikut pada ```routes/web.php```<br>
@@ -488,9 +488,9 @@
     ...
   ```
 
-  ![Screenshot authorization](/Gambar_Praktikum8/21.PNG) <br>
+  ![Screenshot authorization](/Gambar_Praktikum8/21.png) <br>
 
   
   <tb>5. Jalankan aplikasi pada endpoint ```/home``` dengan melampirkan nilai token yang didapat setelah login pada header<br>
-  
-  ![Screenshot authorization](/Gambar_Praktikum8/22.PNG) <br>
+
+  ![Screenshot authorization](/Gambar_Praktikum8/22.png) <br>
