@@ -220,7 +220,7 @@
   
   ***Hasil eksekusi pada phpmyadmin***<br>
 
-  
+
   ![Screenshot penerapan](/Gambar_Praktikum6/20.png) <br>
   
   <tb>6. Jalankan aplikasi pada route ```/users/all```<br>
