@@ -40,7 +40,9 @@
         protected $hidden = [];
     }
   ```
+
   ![Screenshot register](/Gambar_Praktikum8/2.PNG) <br>
+
   
   <tb>3. Buatlah file ```AuthController.php``` dan isilah dengan baris kode berikut <br>
   ```
@@ -86,7 +88,9 @@
         }
       }
   ```
+
   ![Screenshot register](/Gambar_Praktikum8/3.PNG) <br>
+
   <tb>4. Tambahkan baris berikut pada ```routes/web.php``` <br>
   ```
     <?php
@@ -104,8 +108,11 @@
       "password": "wanderer"
     }
   ```
+
   ![Screenshot register](/Gambar_Praktikum8/5.PNG) <br>
+
   **Hasil pada PHPMyAdmin**<br>
+  
   ![Screenshot register](/Gambar_Praktikum8/6.PNG) <br>
   
 * ## Authentication
@@ -152,7 +159,9 @@
         }
     }
   ```
+
   ![Screenshot authentication](/Gambar_Praktikum8/7.PNG) <br>
+
   
   <tb>2. Tambahkan baris berikut pada ```routes/web.php``` <br>
   ```
@@ -163,7 +172,9 @@
       $router->post('/login', ['uses'=> 'AuthController@login']); // route login
     });
   ```
+
   ![Screenshot authentication](/Gambar_Praktikum8/8.PNG) <br>
+
   
   <tb>3. Jalankan aplikasi pada endpoint ```/auth/login``` dengan body berikut <br>
   ```
@@ -172,22 +183,30 @@
       "password": "wanderer"
     }
   ```
+
   ![Screenshot authentication](/Gambar_Praktikum8/9.PNG) <br>
+
   
   > [!NOTE]
   > Opsional: lakukan percobaan dengan menyalahkan email dan password dan amati responnya
 
   **Hasil ketika password salah**<br>
+
   ![Screenshot authentication](/Gambar_Praktikum8/10.PNG) <br>
+
   **Hasil ketika email salah**<br>
+
   ![Screenshot authentication](/Gambar_Praktikum8/11.PNG) <br>
+
   
 * ## Token
   <tb>1. Jalankan perintah berikut untuk membuat migrasi baru <br>
   ```
     php artisan make:migration add_column_token_to_users
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/12.PNG) <br>
+
   
   <tb>2. Tambahkan baris berikut pada migration yang baru terbuat <br>
   ```
@@ -225,7 +244,9 @@
       }
 
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/13.PNG) <br>
+
   
   <tb>3. Tambahkan atribut token di ```$fillable``` pada ```User.php``` <br>
   ```
@@ -256,7 +277,9 @@
         protected $hidden = [];
     }
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/14.PNG) <br>
+
   
   <tb>4. Tambahkan baris berikut pada file ```AuthController.php``` <br>
   ```
@@ -335,13 +358,17 @@
         }
     }
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/15.PNG) <br>
+
   
   <tb>5. Jalankan perintah di bawah untuk menjalankan migrasi terbaru <br>
   ```
     php artisan migrate
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/16.PNG) <br>
+
   
   <tb>6. Jalankan aplikasi pada endpoint ```/auth/login``` dengan body berikut. Salinlah token yang didapat ke notepad<br>
   ```
@@ -350,7 +377,9 @@
       "password": "wanderer"
     }
   ```
+
   ![Screenshot token](/Gambar_Praktikum8/17.PNG) <br>
+
   
 * ## Authorization
   <tb>1. Buatlah file ```Authorization.php``` pada folder ```App/Http/Middleware``` dan isilah dengan baris berikut<br>
@@ -393,7 +422,9 @@
           }
       }
   ```
+
   ![Screenshot authorization](/Gambar_Praktikum8/18.PNG) <br>
+
   
   <tb>2. Tambahkan middleware yang baru dibuat pada ```bootstrap/app.php```.<br>
   ```
@@ -416,7 +447,9 @@
       'auth' => App\Http\Middleware\Authorization::class, //
     ]);
   ```
+
   ![Screenshot authorization](/Gambar_Praktikum8/19.PNG) <br>
+
   
   <tb>3. Buatlah fungsi ```home()``` pada ```HomeController.php```<br>
   ```
@@ -441,7 +474,9 @@
       }
     }
   ```
+
   ![Screenshot authorization](/Gambar_Praktikum8/20.PNG) <br>
+
   
   <tb>4. Tambahkan baris berikut pada ```routes/web.php```<br>
   ```
@@ -452,7 +487,10 @@
     $router->get('/home', ['middleware' => 'auth','uses' => 'HomeController@home']); //
     ...
   ```
+
   ![Screenshot authorization](/Gambar_Praktikum8/21.PNG) <br>
+
   
   <tb>5. Jalankan aplikasi pada endpoint ```/home``` dengan melampirkan nilai token yang didapat setelah login pada header<br>
+  
   ![Screenshot authorization](/Gambar_Praktikum8/22.PNG) <br>
