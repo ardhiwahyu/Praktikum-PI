@@ -350,7 +350,7 @@ aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```<br>
         return $this->belongsToMany(Tag::class, 'post_tag', 'postId', 'tagId');
       }
   ```
-  ![Screenshot relasi](/Gambar_Praktikum7/25.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/25.png) <br>
   
   <tb>2. Tambahkan fungsi ```posts()``` pada file ```Tag.php```<br>
   ```
@@ -359,7 +359,7 @@ aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```<br>
         return $this->belongsToMany(Post::class, 'post_tag', 'tagId', 'postId');
       }
   ```
-  ![Screenshot relasi](/Gambar_Praktikum7/26.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/26.png) <br>
   
   <tb>3. Buatlah file ```TagController.php``` dan isilah dengan baris kode berikut<br>
   ```
@@ -398,7 +398,7 @@ aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```<br>
       }
     }
   ```
-  ![Screenshot relasi](/Gambar_Praktikum7/27.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/27.png) <br>
   
   <tb>4. Tambahkan fungsi ```addTag``` dan response tags pada ```PostController.php```<br>
   ```
@@ -432,7 +432,7 @@ aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```<br>
         ]);
       }
   ```
-  ![Screenshot relasi](/Gambar_Praktikum7/28.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/28.png) <br>
   
   <tb>5. Tambahkan baris berikut pada ```routes/web.php```<br>
   ```
@@ -447,37 +447,37 @@ aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost```<br>
       $router->post('/', ['uses' => 'TagController@createTag']);
     });
   ```
-  ![Screenshot relasi](/Gambar_Praktikum7/29.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/29.png) <br>
   
   <tb>6. Buatlah satu tag menggunakan Postman<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/30.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/30.png) <br>
 
   ***Hasil di PHPMyAdmin:***
-  ![Screenshot relasi](./Gambar_Praktikum7/31.PNG) <br>
+  ![Screenshot relasi](./Gambar_Praktikum7/31.png) <br>
   
   <tb>7. Tambahkan tag **“jadul”** pada post **“disana engkau berdua”** <br>
-  ![Screenshot relasi](/Gambar_Praktikum7/32.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/32.png) <br>
   
   <tb>8. Tampilkan post **“disana engkau berdua”** menggunakan Postman<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/33.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/33.png) <br>
   
   <tb>9. Buatlah postingan **“tanpamu apa artinya”** menggunakan Postman<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/34.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/34.png) <br>
   
   <tb>10. Tambahkan tag **“jadul”** pada postingan **“tanpamu apa artinya”** <br>
-  ![Screenshot relasi](/Gambar_Praktikum7/35.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/35.png) <br>
   
   <tb>11. Buatlah tag **“lagu”** menggunakan Postman<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/36.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/36.png) <br>
   
   <tb>12. Tambahkan tag **“lagu”** pada postingan **“tanpamu apa artinya”** <br>
-  ![Screenshot relasi](/Gambar_Praktikum7/37.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/37.png) <br>
   
   <tb>13. Tampilkan post pertama<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/38.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/38.png) <br>
   
   <tb>14. Tampilkan post kedua<br>
-  ![Screenshot relasi](/Gambar_Praktikum7/39.PNG) <br>
+  ![Screenshot relasi](/Gambar_Praktikum7/39.png) <br>
   
   > [!NOTE]
   > Tag "jadul" yang berada pada dua post menunjukkan **satu** tag dapat berada di **banyak** post
